@@ -35,9 +35,4 @@ def test_sets_of_items():
 
     c = g._sets_of_items(E_[E])
 
-    for items in c:
-        for n, p in items:
-            print n, p
-        print
-
     assert sorted(len(s) for s in c) == [1, 1, 1, 1, 2, 2, 2, 2, 3, 5, 7, 7]

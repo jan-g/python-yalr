@@ -38,6 +38,3 @@ def test_goto():
         (0, F['(', E, ')']),
         (0, F[str]),
     }
-
-    for n, p in goto:
-        print n, p

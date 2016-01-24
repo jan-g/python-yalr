@@ -211,7 +211,6 @@ class LR1(LR):
             self._shift_reduce_conflicts.add((shift, reduce, lookahead))
             return shift
 
-        print level, assoc, l2, a2
         if level > l2:
             return shift
         elif level < l2:

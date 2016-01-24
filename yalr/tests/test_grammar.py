@@ -9,12 +9,12 @@ def make_g():
 
     @n.A(n.A, 'b')
     def f(stack):
-        print "A -> Ab"
+        print("A -> Ab")
         return None
 
     @n.A('c')  # noqa
     def f(stack):
-        print "A -> c"
+        print("A -> c")
 
     grammar.compile(start=n.A)
 
@@ -31,7 +31,7 @@ def test_compile2():
 
     @n2.A(n2.B, 'b')
     def f(stack):
-        print "A -> Ab"
+        print("A -> Ab")
         return None
 
     with pytest.raises(GrammarError):

@@ -71,6 +71,9 @@ class LR(GrammarOperations, Grammar):
         def __ne__(self, other):
             return not(self == other)
 
+        def __hash__(self):
+            return hash(self.state)
+
     class Reduce(object):
         def __init__(self, rule):
             self.rule = rule
@@ -83,6 +86,9 @@ class LR(GrammarOperations, Grammar):
 
         def __ne__(self, other):
             return not(self == other)
+
+        def __hash__(self):
+            return hash(self.rule)
 
         @property
         def nt(self):
@@ -97,6 +103,9 @@ class LR(GrammarOperations, Grammar):
 
         def __ne__(self, other):
             return not(self == other)
+
+        def __hash__(self):
+            return hash(LR.Accept)
 
     class Error(object):
         def __init__(self, message='', **kwargs):
